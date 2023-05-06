@@ -1,3 +1,5 @@
+let = totalMonthy = 0;
+
 $(readyNow)
 
 function readyNow() {
@@ -24,16 +26,30 @@ function addEmployee() {
     <td><button id='deleteButton'>Delete</button></td>
     </tr > `)
 
+    totalMonthy += Math.round(Number($('#annualSalaryInput').val()) / 12);
+
+    monthlyTracker();
+
     //clear inputs
     $('#firstNameInput').val('');
     $('#lastNameInput').val('');
     $('#idInput').val('');
     $('#titleInput').val('');
     $('#annualSalaryInput').val('');
+
+
 }
 
 function deleteEmployee(event) {
     $(event.target).closest('tr').remove();
+}
+
+function monthlyTracker() {
+    $('#monthlyCount').text(`
+    $
+    ${totalMonthy}
+    .00
+    `)
 }
 
 
