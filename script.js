@@ -23,6 +23,13 @@ function addEmployee() {
     <td>${annualSalaryIn}</td>
     <td><button id='deleteButton'>Delete</button></td>
     </tr > `)
+
+    //clear inputs
+    $('#firstNameInput').val('');
+    $('#lastNameInput').val('');
+    $('#idInput').val('');
+    $('#titleInput').val('');
+    $('#annualSalaryInput').val('');
 }
 
 function deleteEmployee(event) {
