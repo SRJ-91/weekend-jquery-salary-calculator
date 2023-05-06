@@ -16,6 +16,10 @@ function addEmployee() {
     const titleIn = $('#titleInput').val();
     const annualSalaryIn = $('#annualSalaryInput').val();
 
+    if (firstNameIn || lastNameIn || idIn || titleIn || annualSalaryIn === undefined) {
+        alert('Please fill out all fields')
+        return false;
+    }
 
     $('tbody').append(`<tr>
     <td>${firstNameIn}</td>
@@ -37,9 +41,7 @@ function addEmployee() {
     $('#titleInput').val('');
     $('#annualSalaryInput').val('');
 
-    if (firstNameIn || lastNameIn || idIn || titleIn || annualSalaryIn === undefined) {
-        alert('Please fill out all forms')
-    }
+
 }
 //delete button below
 function deleteEmployee(event) {
