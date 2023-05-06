@@ -1,9 +1,78 @@
-table,
-td {
-    border: 1px solid;
+body {
+    background-image: url("images/Executive-holding-out-pile-of-cash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-tr,
+.title {
+    text-align: left;
+}
+
+.add-employee {
+    font-weight: bold;
+}
+
+.input-fields {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.buttonContainer {
+    text-align: center;
+}
+
+#submitButton {
+    color: blue;
+    font-size: 50px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 30%;
+    box-shadow: gray;
+}
+
+#submitButton:hover {
+    box-shadow: inset;
+    background-color: gold;
+    transition-duration: 1s;
+}
+
+.the-employees {
+    font-weight: bold;
+}
+
+table {
+    border: 1px solid;
+    width: 100%;
+}
+
+thead {
+    background-color: goldenrod;
+}
+
+td,
+tr {
+    border: 1px solid;
+    padding: 15px;
+}
+
 td {
-    padding: 10px;
+    background-color: skyblue;
+}
+
+#deleteButton {
+    width: 100%;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+#deleteButton:hover {
+    background-color: red;
+    transition-duration: 2s;
+}
+
+.monthly-container {
+    text-align: right;
+    text-decoration: underline;
+    color: goldenrod;
 }

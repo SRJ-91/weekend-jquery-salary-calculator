@@ -13,9 +13,10 @@
 
 <body>
     <main>
-        <h1>Salary Calculator</h1>
-        <p1>Add Employee</p1>
-        <section>
+        <!-- Control Panel -->
+        <h1 class="title">Salary Calculator</h1>
+        <p1 class="add-employee">Add and Remove Employees</p1>
+        <section class="input-fields">
 
             <!--button crafting-->
             <input type="text" placeholder="First Name" id="firstNameInput">
@@ -26,10 +27,12 @@
 
         </section>
         <section>
-            <button id="submitButton">Submit</button>
+            <div class="buttonContainer">
+                <button id="submitButton">Hired!</button>
+            </div>
         </section>
         <section>
-            <p>Employees</p>
+            <p class="the-employees">Employees</p>
         </section>
         <section>
             <!--T T T Table Time-->
@@ -41,7 +44,7 @@
                         <th>ID</th>
                         <th>Title</th>
                         <th>Annual Salary</th>
-                        <th>...</th>
+                        <th>X</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,8 +53,11 @@
 
             </table>
         </section>
-        <section>
-            <h1>Total Monthly: <span id="monthlyCount">0</span> </h1>
+        <div class="monthly-container">
+            <!-- Monthly Counter-->
+            <section>
+                <h1>Total Monthly: <span id="monthlyCount">0</span> </h1>
+        </div>
         </section>
     </main>
 </body>

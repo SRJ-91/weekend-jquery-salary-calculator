@@ -23,7 +23,7 @@ function addEmployee() {
     <td>${idIn}</td>
     <td>${titleIn}</td>
     <td>${annualSalaryIn}</td>
-    <td><button id='deleteButton'>Delete</button></td>
+    <td><button id='deleteButton'>Retired/Terminated</button></td>
     </tr > `)
     //monthly tracker math
     totalMonthly += Math.round(Number($('#annualSalaryInput').val()) / 12);
@@ -37,7 +37,9 @@ function addEmployee() {
     $('#titleInput').val('');
     $('#annualSalaryInput').val('');
 
-
+    if (firstNameIn || lastNameIn || idIn || titleIn || annualSalaryIn === undefined) {
+        alert('Please fill out all forms')
+    }
 }
 //delete button below
 function deleteEmployee(event) {
