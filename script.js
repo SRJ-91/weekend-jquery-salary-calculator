@@ -1,4 +1,4 @@
-let = totalMonthy = 0;
+let = totalMonthly = 0;
 
 $(readyNow)
 
@@ -15,7 +15,7 @@ function addEmployee() {
     const idIn = $('#idInput').val();
     const titleIn = $('#titleInput').val();
     const annualSalaryIn = $('#annualSalaryInput').val();
-    //delete button below
+
 
     $('tbody').append(`<tr>
     <td>${firstNameIn}</td>
@@ -25,8 +25,8 @@ function addEmployee() {
     <td>${annualSalaryIn}</td>
     <td><button id='deleteButton'>Delete</button></td>
     </tr > `)
-
-    totalMonthy += Math.round(Number($('#annualSalaryInput').val()) / 12);
+    //monthly tracker math
+    totalMonthly += Math.round(Number($('#annualSalaryInput').val()) / 12);
 
     monthlyTracker();
 
@@ -39,17 +39,21 @@ function addEmployee() {
 
 
 }
-
+//delete button below
 function deleteEmployee(event) {
     $(event.target).closest('tr').remove();
 }
-
+//monthly tracker below
 function monthlyTracker() {
     $('#monthlyCount').text(`
     $
-    ${totalMonthy}
+    ${totalMonthly}
     .00
     `)
+    //red text conditional below
+    if (totalMonthly >= 20000) {
+        $('#monthlyCount').css('color', 'Red')
+    }
 }
 
 
