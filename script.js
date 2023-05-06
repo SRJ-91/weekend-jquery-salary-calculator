@@ -8,10 +8,10 @@ function readyNow() {
 function addEmployee() {
 
     const firstNameIn = $('#firstNameInput').val();
-    const lastNameIn = $('#firstNameInput').val();
-    const idIn = $('#firstNameInput').val();
-    const titleIn = $('#firstNameInput').val();
-    const annualSalaryIn = $('#firstNameInput').val();
+    const lastNameIn = $('#lastNameInput').val();
+    const idIn = $('#idInput').val();
+    const titleIn = $('#titleInput').val();
+    const annualSalaryIn = $('#annualSalaryInput').val();
     //delete button eventually
 
     $('tbody').append(`<tr>
