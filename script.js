@@ -4,6 +4,7 @@ function readyNow() {
     console.log('JS and JQ');
 
     $('#submitButton').on('click', addEmployee);
+    $('tbody').on('click', '#deleteButton', deleteEmployee);
 }
 function addEmployee() {
 
@@ -12,7 +13,7 @@ function addEmployee() {
     const idIn = $('#idInput').val();
     const titleIn = $('#titleInput').val();
     const annualSalaryIn = $('#annualSalaryInput').val();
-    //delete button eventually
+    //delete button below
 
     $('tbody').append(`<tr>
     <td>${firstNameIn}</td>
@@ -20,10 +21,13 @@ function addEmployee() {
     <td>${idIn}</td>
     <td>${titleIn}</td>
     <td>${annualSalaryIn}</td>
+    <td><button id='deleteButton'>Delete</button></td>
     </tr > `)
 }
 
-
+function deleteEmployee(event) {
+    $(event.target).closest('tr').remove();
+}
 
 
 
