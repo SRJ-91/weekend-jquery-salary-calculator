@@ -8,6 +8,7 @@ function readyNow() {
     $('#submitButton').on('click', addEmployee);
     $('tbody').on('click', '#deleteButton', deleteEmployee);
 }
+
 function addEmployee() {
 
     const firstNameIn = $('#firstNameInput').val();
