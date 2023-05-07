@@ -17,7 +17,7 @@ function addEmployee() {
     const titleIn = $('#titleInput').val();
     const annualSalaryIn = $('#annualSalaryInput').val();
 
-    if (firstNameIn || lastNameIn || idIn || titleIn || annualSalaryIn === undefined) {
+    if (firstNameIn === '' || lastNameIn === '' || idIn === '' || titleIn === '' || annualSalaryIn === '') {
         alert('Please fill out all fields')
         return false;
     }

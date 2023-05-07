@@ -74,5 +74,6 @@ td {
 .monthly-container {
     text-align: right;
     text-decoration: underline;
-    color: goldenrod;
+    text-decoration-color: goldenrod;
+    color: green;
 }
